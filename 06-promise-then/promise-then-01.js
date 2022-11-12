@@ -18,9 +18,9 @@ console.log(p2);
 
 // promise {<fulfilled>: 'p1-success'}
 // Promise {<fulfilled>: undefined}
-// setTimeout(() => {
-//     console.log(p1);
-//     console.log(p2);
-// }, 0);
+setTimeout(() => {
+    console.log(p1);
+    console.log(p2);
+}, 0);
 
 console.log("Hello world from sync");
