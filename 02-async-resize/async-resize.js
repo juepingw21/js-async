@@ -1,9 +1,6 @@
-function interval(callback, delay = 1000) {
-    let id = setInterval(() => callback(id), delay);
-}
+const rate = 200;
 
-const rate = 1000;
-
+// shrink the div to the right side by 10px/sec
 let shrinkDiv = (timeId) => {
     const div = document.querySelector("div");
     let width = parseInt(window.getComputedStyle(div).width);
@@ -27,9 +24,13 @@ let moveDiv = (timeId) => {
     }
 };
 
-interval(moveDiv, rate);
-console.log("Hello world");
+function interval(callback, delay = 1000) {
+    let id = setInterval(() => callback(id), delay);
+}
 
+interval(moveDiv, rate);
+
+console.log("Hello world");
 
 /* Un-optimized code */
 // interval((timeId) => {
